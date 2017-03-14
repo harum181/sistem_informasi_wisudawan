@@ -11,7 +11,4 @@
 
 # PROJECT SISTEM TERDISTRIBUSI #
 
-Project sistem terdistribusi dengan nama website SISWA (Sistem Informasi Wisudawan)
-Silahkan di download atau di clone
-
 </p>
