@@ -22,7 +22,7 @@
             </div>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="service-menu-2 text-center">
               <img style="margin-bottom:7px" src="/img/icon-tracer.png" alt="">
               <h2 class="title-control">Alumni Tracers</h2>
