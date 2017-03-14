@@ -1,0 +1,118 @@
+body {
+  font-family: 'Rubik', sans-serif; }
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none; }
+
+p, h1, h2, a, h3, h4 {
+  font-family: 'Rubik', sans-serif; }
+
+p {
+  font-weight: 300; }
+
+ul li {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.lr-padding {
+  padding-left: 0;
+  padding-right: 0; }
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+.logo {
+  width: 120px; }
+
+.nav-right {
+  position: relative;
+  top: 24px;
+  float: right; }
+  .nav-right a {
+    margin-right: 30px; }
+  .nav-right .menu {
+    color: #202020;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500; }
+
+.navigation-default {
+  height: 70px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #d7d7d7; }
+
+.footer-box {
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #d7d7d7; }
+
+.btn-green {
+  padding: 10px 18px;
+  border-radius: 4px;
+  background-color: #0fd121;
+  color: #ffffff;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 300ms all ease; }
+
+.btn-green:hover {
+  color: #ffffff;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+  background-color: #0ab019; }
+
+.btn-dark-blue {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  background-color: #1f3d89;
+  color: #ffffff;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 300ms all ease; }
+
+.btn-dark-blue:hover {
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+  background-color: #182d60; }
+
+input:focus {
+  border: 1px solid #0fd121; }
+
+.form-control:focus {
+  border: 1px solid #0fd121;
+  border-left: 5px solid #0fd121;
+  box-shadow: 0px 0px 10px 0px rgba(15, 209, 33, 0.53); }
+
+.control-label {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300; }
+
+::-moz-selection {
+  background-color: rgba(15, 209, 33, 0.68);
+  color: #ffffff; }
+
+::selection {
+  background-color: rgba(15, 209, 33, 0.68);
+  color: #ffffff; }
+
+::-webkit-scrollbar {
+  width: 6px; }
+
+::-webkit-scrollbar-track {
+  background-color: rgba(207, 207, 207, 0.36); }
+
+::-webkit-scrollbar-thumb {
+  background-color: #0fd121; }
+
+.info-header {
+  background-image: url("../img/icon-info.png");
+  height: 300px;
+  width: 100%; }
