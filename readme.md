@@ -7,8 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-<p align="center">
+# PROJECT SISTEM TERDISTRIBUSI
 
-# PROJECT SISTEM TERDISTRIBUSI #
-
-</p>
+Project sistem terdistribusi dengan nama website SISWA (Sistem Informasi Wisudawan)
+Silahkan di download atau di clone
