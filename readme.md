@@ -1,4 +1,4 @@
-<p align="center"><style="width:250px" img src="http://svgshare.com/i/yL.svg"></p>
+<p align="center"><img style="width:250px; margin: 0 auto;"  src="http://svgshare.com/i/yL.svg"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
