@@ -48,7 +48,7 @@
 
           <div class="header-box">
             <img class="logo-header" src="/img/logo-header.svg" alt="">
-            <h2 class="title-header">Sistem Informasi Wisudawan<br>Universitas Diponegoro</h1>
+            <h2 class="title-header">Sistem Informasi Wisudawan<br>Universitas Diponegoro</h2>
             <p class="header-subtitle">
               Website aplikasi yang dibuat untuk memberikan fasilitas kepada wisudawan Universitas Diponegoro
             </p>
