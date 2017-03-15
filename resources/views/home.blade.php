@@ -71,9 +71,7 @@
             </table>
             <div class="footer-panel">
               <p class="ignore">Data yang telah diverifikasi tidak dapat dirubah lagi</p>
-              <form class="" action="index.html" method="post">
-                <button class="button-green" type="submit" name="button">Perbarui data</button>
-              </form>
+              <a class="button-green but-con" href="{{ url('update_info_kuliah') }}">Perbarui data</a>
             </div>
           </div>
         </div>

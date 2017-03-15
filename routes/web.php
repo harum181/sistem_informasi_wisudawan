@@ -23,6 +23,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/pekerjaan', 'PekerjaanController@index');
+Route::get('/update_info_kuliah', 'InfoKuliahController@index');
+Route::get('/update_info_pendidikan', 'InfoPendidikanController@index');
+Route::get('/update_info_pekerjaan', 'InfoPekerjaanController@index');
+
 Route::get('/kelola_data_wisuda', function(){
   return view('kelola_data_wisuda');
 });

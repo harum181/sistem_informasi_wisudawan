@@ -74,9 +74,7 @@
             </table>
             <div class="footer-panel">
               <p class="ignore">Data yang telah diverifikasi tidak dapat dirubah lagi</p>
-              <form class="" action="index.html" method="post">
-                <button class="button-green" type="submit" name="button">Perbarui data</button>
-              </form>
+              <a class="button-green but-con" href="{{ url('update_info_pekerjaan') }}">Perbarui data</a>
             </div>
           </div>
         </div>
@@ -106,7 +104,7 @@
                 <td class="skripsi con">
                     Sistem Informasi Wisudawan Universitas Diponegoro dengan Metode Backpropagation
                 </td>
-                <td class="fuxx">Tahun Masuk</td><td class="fuxtt">2014</td>
+                <td class="fuxx">Program Studi</td><td class="fuxtt">Ilmu Komputer</td>
               </tr>
             </table>
 
@@ -129,7 +127,7 @@
                 <td class="skripsi con">
                     Sistem Informasi Wisudawan Universitas Diponegoro dengan Metode Backpropagation
                 </td>
-                <td class="fuxx">Tahun Masuk</td><td class="fuxtt">2014</td>
+                <td class="fuxx">Program Studi</td><td class="fuxtt">Ilmu Komputer</td>
               </tr>
             </table>
 
@@ -152,15 +150,13 @@
                 <td class="skripsi con">
                     Sistem Informasi Wisudawan Universitas Diponegoro dengan Metode Backpropagation
                 </td>
-                <td class="fuxx">Tahun Masuk</td><td class="fuxtt">2014</td>
+                <td class="fuxx">Program Studi</td><td class="fuxtt">Ilmu Komputer</td>
               </tr>
             </table>
 
             <div class="footer-panel">
               <p class="ignore">Data yang telah diverifikasi tidak dapat dirubah lagi</p>
-              <form class="" action="index.html" method="post">
-                <button class="button-green" type="submit" name="button">Perbarui data</button>
-              </form>
+              <a class="button-green but-con" href="{{ url('update_info_pendidikan') }}">Perbarui data</a>
             </div>
           </div>
         </div>
