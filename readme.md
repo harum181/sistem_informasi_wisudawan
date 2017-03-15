@@ -11,5 +11,3 @@
 
 Project sistem terdistribusi dengan nama website SISWA (Sistem Informasi Wisudawan)
 Silahkan download atau clone :)
-SISTER
-2
