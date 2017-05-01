@@ -61,6 +61,14 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="" class="col-md-4 control-label">NIM</label>
+
+                            <div class="col-md-6">
+                                <input id="" type="text" class="form-control" name="nim">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register

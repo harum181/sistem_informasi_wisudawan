@@ -24,23 +24,31 @@
 
             <hr>
 
-            <form class="update-form" action="index.html" method="post">
+            <form class="update-form" action="/pekerjaan" method="post">
 
               {{-- pekerjaan --}}
               <label for="email" class="col-md-2 control-label">Pekerjaan</label>
 
               <div class="col-md-10">
-                <input class="input-update form-update-control" type="text" name="" value="">
+                <input class="input-update form-update-control" type="text" name="pekerjaan" placeholder="cth. S" value="">
               </div>
+
 
               {{-- bidang pekerjaan --}}
               <label for="email" class="col-md-2 control-label">Bidang Pekerjaan</label>
 
               <div class="col-md-10">
-                <input class="input-update form-update-control" type="text" name="" value="">
+                <input class="input-update form-update-control" type="text" name="bidang_pekerjaan" value="">
               </div>
 
-              {{-- alamat kantor --}}
+              {{-- jabatan --}}
+              <label for="email" class="col-md-2 control-label">Jabatan</label>
+
+              <div class="col-md-10">
+                <input class="input-update form-update-control" type="text" name="jabatan" value="">
+              </div>
+
+              {{-- nama jalan kantor --}}
               <label for="email" class="col-md-2 control-label">Alamat Kantor</label>
 
               <div class="col-md-10">
@@ -54,33 +62,42 @@
                 font-weight:300;
                 padding: 10px
                 "
-                name="name" rows="5" cols="85">
+                name="jalan" rows="5" cols="85">
                 </textarea>
+              </div>
+
+              {{-- kota/kabupaten --}}
+              <label for="email" class="col-md-2 control-label">Kota/Kabupaten</label>
+
+              <div class="col-md-10">
+                <input class="input-update form-update-control" type="text" name="kota" value="">
+              </div>
+
+              {{-- provinsi --}}
+              <label for="email" class="col-md-2 control-label">Provinsi</label>
+
+              <div class="col-md-10">
+                <input class="input-update form-update-control" type="text" name="provinsi" value="">
               </div>
 
                 {{-- gaji --}}
                 <label for="email" class="col-md-2 control-label">Gaji</label>
 
                 <div class="col-md-10">
-                  <input class="input-update form-update-control" type="text" name="" value="">
+                  <input class="input-update form-update-control" type="text" name="gaji" value="">
                 </div>
 
-                {{-- jabatan --}}
-                <label for="email" class="col-md-2 control-label">Jabatan</label>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                <div class="col-md-10">
-                  <input class="input-update form-update-control" type="text" name="" value="">
-                </div>
+                <input type="hidden" name="user_id" value="1">
 
                 <div class="footer-panel">
                   <p class="col-md-7 update-text">Perbarui data inforrmasi kuliah</p>
                   <a class="col-md-2 btn-red" href="{{ url('pekerjaan') }}">Batal</a>
-                  <button class="button-green" type="submit" name="button">Perbarui data</button>
+                  <input class="button-green" type="submit" name="entry_job"></input>
                 </div>
-
-              </div>
-
             </form>
+          </div>
 
         </div>
       </div>

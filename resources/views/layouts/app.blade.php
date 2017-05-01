@@ -49,8 +49,8 @@
                             <a class="btn-green" href="{{ route('login') }}">Login</a>
                             {{-- <li><a href="{{ route('register') }}">Register</a></li> --}}
                         @else
-                            <a class="menu" href="{{ url('/menu') }}">Menu</a>
-                            <a class="menu" href="{{ url('/home') }}">Kelola Data</a>
+                            <a class="menu" href="{{ url('/home') }}">Menu</a>
+                            <a class="menu" href="{{ url('/info') }}">Kelola Data</a>
                             <a class="menu" href="{{ url('alumni_tracers') }}">Alumni Tracer</a>
                             <div class="dropdown menu menus">
 

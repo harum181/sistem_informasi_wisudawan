@@ -38,7 +38,7 @@
 
             {{-- Link Collection --}}
             <div class="btn-groups">
-              <a class="button-green" href="{{ url('/home') }}">Identitas Pribadi</a>
+              <a class="button-green" href="{{ url('/info') }}">Identitas Pribadi</a>
               <a class="button-dark-blue" href="{{ url('/pekerjaan') }}">Pendidikan</a>
               <a class="button-baby-blue" href="{{ url('/pekerjaan') }}">Pekerjaan</a>
             </div>
@@ -55,26 +55,51 @@
         <div class="profil-panel-body">
           <div class="identitas-pribadi-box">
             {{-- Detail info pekerjaan --}}
+            @if (Auth::user()->job)
+                {{-- {{ Auth::user()->job->pekerjaan }} --}}
             <table class="info-contents">
               <tr>
-                <td>Pekerjaan</td><td class="con">Game Developer</td>
+                <td>Pekerjaan</td><td class="con">
+                      {{ Auth::user()->job->pekerjaan }}
+                </td>
               </tr>
               <tr>
-                <td>Bidang pekerjaan</td><td class="con">Komputer</td>
+                <td>Bidang pekerjaan</td><td class="con">
+                      {{ Auth::user()->job->bidang_pekerjaan }}
+                </td>
               </tr>
               <tr>
-                <td>Alamat kantor</td><td class="con">Jl. Impala Space No.450 Semarang, Jawa Tengah </td>
+                <td>Alamat kantor</td><td class="con">
+                      {{ Auth::user()->job->jalan }}, {{ Auth::user()->job->kota }}, {{ Auth::user()->job->provinsi }}
+                </td>
               </tr>
               <tr>
-                <td>Gaji</td><td class="con">Rp 10.000.000</td>
+                <td>Gaji</td><td class="con">
+                      Rp {{ Auth::user()->job->gaji }}
+                </td>
               </tr>
               <tr>
-                <td>Jabatan</td><td class="con">UI/UX Manager</td>
+                <td>Jabatan</td><td class="con">
+                      {{ Auth::user()->job->jabatan }}
+                </td>
               </tr>
             </table>
+            @else
+
+            @endif
             <div class="footer-panel">
-              <p class="ignore">Data yang telah diverifikasi tidak dapat dirubah lagi</p>
-              <a class="button-green but-con" href="{{ url('update_info_pekerjaan') }}">Perbarui data</a>
+              <p class="ignore">
+                @if (Auth::user()->job)
+                    Data yang telah diverifikasi tidak dapat dirubah lagi
+                @else
+                    <span class="notif-update"><i class="fa fa-info-circle seth"></i>Perbarui informasi pekerjaan anda</span>
+                @endif
+              </p>
+              @if (Auth::user()->job)
+                  <a class="button-green but-con hube" href="pekerjaan/{{ Auth::user()->job->id }}/edit"><i class="fa fa-arrow-circle-up seto"></i>Update data</a>
+              @else
+                  <a class="button-green but-con hub" href="{{ url('pekerjaan/create/') }}"><i class="fa fa-arrow-circle-up seto"></i>Perbarui data</a>
+              @endif
             </div>
           </div>
         </div>

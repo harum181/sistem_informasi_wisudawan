@@ -3,82 +3,74 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Detail;
+use App\User;
 
 class InfoKuliahController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        return view('info_kuliah');
+        $data_wisuda = Detail::all();
+        return view('info', ['data_wisuda' => $data_wisuda ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('info_kuliah_create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $data_wisuda = new Detail;
+          $data_wisuda->ipk                = $request->ipk;
+          $data_wisuda->predikat           = $request->predikat;
+          $data_wisuda->lama_studi         = $request->lama_studi;
+          $data_wisuda->tgl_masuk          = $request->tgl_masuk;
+          $data_wisuda->tgl_lulus          = $request->tgl_lulus;
+          $data_wisuda->status_cuti        = $request->status_cuti;
+          $data_wisuda->user_id            = $request->user_id;
+        $data_wisuda->save();
+
+        return redirect('info')->with('message', 'data sudah di update');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
+        // $data_wisuda = Detail::where('title', $id);
+
+        // $data_wisuda = Detail::find($id);
         //
+        // if (!$data_wisuda) {
+        //   abort(404);
+        // }
+        //
+        // return view('info_kuliah')->with('info_data', $data_wisuda);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $data_wisuda = Detail::find($id);
+
+        if (!$data_wisuda) {
+          abort(404);
+        }
+
+        return view('info_kuliah_update')->with('info_data', $data_wisuda);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
-    }
+      $data_wisuda = Detail::find($id);
+        $data_wisuda->ipk                = $request->ipk;
+        $data_wisuda->predikat           = $request->predikat;
+        $data_wisuda->lama_studi         = $request->lama_studi;
+        $data_wisuda->tgl_masuk          = $request->tgl_masuk;
+        $data_wisuda->tgl_lulus          = $request->tgl_lulus;
+        $data_wisuda->status_cuti        = $request->status_cuti;
+        $data_wisuda->user_id            = $request->user_id;
+      $data_wisuda->save();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+      return redirect('info')->with('message', 'data sudah di update');
     }
 }

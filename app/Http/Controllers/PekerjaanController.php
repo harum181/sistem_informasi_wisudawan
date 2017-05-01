@@ -3,82 +3,64 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Job;
+use App\User;
 
 class PekerjaanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        return view('pekerjaan');
+        $data_pekerjaan = Job::all();
+        return view('pekerjaan', ['data_pekerjaan' => $data_pekerjaan ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('pekerjaan_create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $data_pekerjaan = new Job;
+          $data_pekerjaan->pekerjaan          = $request->pekerjaan;
+          $data_pekerjaan->bidang_pekerjaan   = $request->bidang_pekerjaan;
+          $data_pekerjaan->jalan              = $request->jalan;
+          $data_pekerjaan->kota               = $request->kota;
+          $data_pekerjaan->provinsi           = $request->provinsi;
+          $data_pekerjaan->gaji               = $request->gaji;
+          $data_pekerjaan->jabatan            = $request->jabatan;
+          $data_pekerjaan->user_id            = $request->user_id;
+        $data_pekerjaan->save();
+
+        return redirect('pekerjaan')->with('message', 'data sudah di update');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $data_pekerjaan = Job::find($id);
+
+        if (!$data_pekerjaan) {
+          abort(404);
+        }
+
+        return view('pekerjaan_update')->with('info_pekerjaan', $data_pekerjaan);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        $data_pekerjaan = Job::find($id);
+          $data_pekerjaan->pekerjaan          = $request->pekerjaan;
+          $data_pekerjaan->bidang_pekerjaan   = $request->bidang_pekerjaan;
+          $data_pekerjaan->jalan              = $request->jalan;
+          $data_pekerjaan->kota               = $request->kota;
+          $data_pekerjaan->provinsi           = $request->provinsi;
+          $data_pekerjaan->gaji               = $request->gaji;
+          $data_pekerjaan->jabatan            = $request->jabatan;
+          $data_pekerjaan->user_id            = $request->user_id;
+        $data_pekerjaan->save();
+
+        return redirect('pekerjaan')->with('message', 'data sudah di update');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }
